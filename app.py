@@ -11,10 +11,7 @@ from PIL import Image, ImageDraw, ImageFont
 import base64
 from functions import *
 
-# st.set_page_config(layout="wide",page_title="EcoTrack")
-st.set_page_config(layout="wide", page_title="EcoTrack", page_icon="./media/logopng.ico")
-
-#, page_icon="./media/favicon.ico"
+st.set_page_config(layout="wide",page_title="EcoTrack", page_icon="./media/logopng.ico")
 
 def get_base64(bin_file):
     with open(bin_file, 'rb') as f:
@@ -42,10 +39,10 @@ with open("./style/main.md", "r", encoding="utf-8") as main_page:
     main.markdown(f"""{main_page.read()}""")
 
 _,but,_ = main.columns([1,2,1])
-if but.button("Know Your Carbon Footprint!", type="primary"):
+if but.button("Calculate Your Carbon Footprint!", type="primary"):
     click_element('tab-1')
 
-tab1, tab2, tab3, tab4, tab5 = comps.tabs(["Personal","Travel","Waste","Energy","Consumption"])
+tab1, tab2, tab3, tab4, tab5 = comps.tabs([" Personal","Travel","Waste","Energy","Consumption"])
 tab_result,_ = result.tabs([" "," "])
 
 def component():
@@ -156,13 +153,14 @@ pop = """
 </div>
 """
 col2.markdown(pop, unsafe_allow_html=True)
-#
+
 if home.button("🏡"):
     click_element('tab-0')
 _,resultmid,_ = result.columns([1,2,1])
 
 tree_count = round(prediction / 411.4)
-tab_result.markdown(f"You owe nature <b>{tree_count}</b> tree{'s' if tree_count > 1 else ''} monthly.", unsafe_allow_html=True)
+tab_result.markdown(f"""You owe nature <b>{tree_count}</b> tree{'s' if tree_count > 1 else ''} monthly. <br> {f"<a href='https://www.tema.org.tr/en/homepage' id = 'button-17' class='button-17' role='button'> 🌳 Proceed to offset 🌳</a>" if tree_count > 0 else ""}""",  unsafe_allow_html=True)
+
 if resultmid.button("  ", type="secondary"):
     click_element('tab-1')
 

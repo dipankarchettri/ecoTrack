@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-body{{
+body {{
         background-image: url("data:image/png;base64,{background}");        
-        /* background-color: white; */
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -11,7 +9,7 @@ body{{
         }}
     p {{
     color: black;
-    font-family: "Poppins",Roboto,Arial,sans-serif;
+    font-family: "Google Sans",Roboto,Arial,sans-serif;
     font-size: 20px;
     
     }}
@@ -26,7 +24,7 @@ body{{
           align-items: center;
           appearance: none;
           background-color: #fff;
-          border-radius: 24px;
+          border-radius: 12px;
           border-style: none;
           box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
           box-sizing: border-box;
@@ -76,7 +74,7 @@ body{{
          cursor: pointer;
          padding: 0.5rem 20px;
          background: rgb(255, 255, 255);
-         border-radius: 2rem;
+         border-radius: 1rem;
          margin: 1.75em 0px;
          max-width: 1000px;
          overflow: hidden;
@@ -109,9 +107,9 @@ body{{
     button[data-testid = "baseButton-primary"]{{width: 100%;}}
     button[data-testid = "baseButton-secondary"]{{width: 100%;}}
     div[data-testid = "stApp"]{{background: None; color: black;}}
-    div[id^=tabs-bui][id$=-tabpanel-0] > div> div > div > div > div[class = "stMarkdown"] {{padding: 20px; border-radius: 2rem; background: rgba(255,255,255,0.7);}}
-    div[id^=tabs-bui][id$=-tabpanel-1] > div > div > div > div > div[class = "st-ae"] {{padding: 20px; border-radius: 2rem; background: rgba(255,255,255,0.7);}}
-    div[id^=tabs-bui][id$=-tabpanel-2] > div > div > div > div > div[class = "st-ae"] {{padding: 20px; border-radius: 2rem; background: rgba(255,255,255,0.7);}}
+    div[id^=tabs-bui][id$=-tabpanel-0] > div> div > div > div > div[class = "stMarkdown"] {{padding: 20px; border-radius: 1rem; background: rgba(255,255,255,0.7);}}
+    div[id^=tabs-bui][id$=-tabpanel-1] > div > div > div > div > div[class = "st-ae"] {{padding: 20px; border-radius: 1rem; background: rgba(255,255,255,0.7);}}
+    div[id^=tabs-bui][id$=-tabpanel-2] > div > div > div > div > div[class = "st-ae"] {{padding: 20px; border-radius: 1rem; background: rgba(255,255,255,0.7);}}
     div[id^=tabs-bui][id$=-tabpanel-2] > div > div > div > div > div > div[id^=tabs-bui][id$=-tabpanel-0] > div> div > div > div > div[class = "stMarkdown"]{{background: rgba(255,255,255,0);}}
     div[data-testid  = "column"] > div > div> div > div > div > div >p {{text-align: center;}}
     div[data-testid  = "stButton"] {{text-align: center;}}
@@ -128,7 +126,7 @@ body{{
     font-size: 20px;
     font-weight: bold;
     }}
-    div[data-baseweb="tooltip"] > div {{background-color: rgb(255, 255, 255); border-radius: 2rem; padding: 10px;}}
+    div[data-baseweb="tooltip"] > div {{background-color: rgb(255, 255, 255); border-radius: 1rem; padding: 10px;}}
 
     div[id^=tabs-bui][id$=-tabpanel-4] > div > div > div > div > div > div > div> div > div > div > button[kind = "secondary"] 
      {{
@@ -158,10 +156,4 @@ body{{
 			background-repeat: no-repeat;
 			display: block;
 		}}
-     
-
-
-
-          /* Navbar Styles */
-
 		
